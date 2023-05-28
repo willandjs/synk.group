@@ -4,12 +4,14 @@
   const date = new Date();
   const options: any = { weekday: 'long', day: 'numeric', month: 'long' };
   const formattedDate = date.toLocaleDateString('nb-NO', options);
+
+  export let toggleMenu = () => {};
 </script>
 
 <header class="p-8 grid items-center text-3xl">
   <nav class="flex justify-between">
     <div class="flex gap-x-12 items-center">
-      <button class="hover:bg-black/10 p-3 rounded-xl transition">
+      <button on:click={toggleMenu} class="hover:bg-black/10 p-3 rounded-xl transition">
         <MenuIcon size="20" />
       </button>
       <div><span class="font-medium">Synk.</span>Variant</div>
